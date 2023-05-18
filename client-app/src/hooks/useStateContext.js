@@ -15,7 +15,7 @@ export const useStateContext = () => {
   return {
     context,
     setContext: (obj) => {
-      setContext({ ...context, ...obj }); // Spread the previous context along with the new object
+      setContext({ ...context, ...obj });
     }
   };
 };

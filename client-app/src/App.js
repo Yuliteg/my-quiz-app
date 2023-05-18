@@ -1,8 +1,11 @@
-import Login from "./components/Login";
+import Login from "./components/LoginPage";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Quiz from "./components/Quiz";
+import Result from "./components/Result";
+import ErrorPage from "./components/ErrorPage";
 
 const darkTheme = createTheme({
   palette: {
@@ -35,8 +38,9 @@ function App() {
             <Login checked={isLightTheme} onChange={toggleTheme} />
           </ThemeProvider>
         )} />
-        <Route />
-        <Route />
+        <Route path="/quiz" element={<Quiz />}/>
+        <Route path="/result" element={<Result />}/>
+        <Route path="*" element={<ErrorPage />}/>
       </Routes>
     </BrowserRouter>
 
