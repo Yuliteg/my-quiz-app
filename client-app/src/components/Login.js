@@ -2,6 +2,8 @@ import { Box, Button, CardContent, TextField, Card, Typography, Switch } from '@
 import CenterContainer from './helper/CenterContainer';
 import { useState } from 'react';
 import useForm from '../hooks/useForm';
+import { ENDPOINT, createAPIEndpoint } from '../api';
+import { useStateContext } from '../hooks/useStateContext';
 
 const getLoginModel = () => ({
   name: '',
@@ -9,7 +11,8 @@ const getLoginModel = () => ({
 })
 
 const Login = ({ checked, onChange }) => {
-  const { values, setValues, errors, setErrors, handleInputChange, validateForm } = useForm(getLoginModel)
+  const {context, setContext} = useStateContext()
+  const { values, setValues, errors, handleInputChange, validateForm } = useForm(getLoginModel)
 
   const [value, setValue] = useState({})
 
@@ -25,7 +28,13 @@ const Login = ({ checked, onChange }) => {
   const login = (e) => {
     e.preventDefault()
     if (validateForm())
-      console.log(values);
+      createAPIEndpoint(ENDPOINT.participant)
+        .post(values)
+        .then(res => {
+          setContext({participantId: res.data.participantId})
+          console.log(context);
+        })
+        .catch(err => console.log(err))
   }
 
   return (
@@ -51,17 +60,6 @@ const Login = ({ checked, onChange }) => {
           }}>
             <form noValidate autoComplete='off' onSubmit={login}>
               <TextField
-                label="Email"
-                name="email"
-                value={values.email}
-                onChange={handleInputChange}
-                variant='outlined'
-                color="success"
-                inputProps={{ style: { fontSize: "18px", height: "1rem" } }}
-                sx={sharedTextFieldStyles}
-                {...(errors.email && { error: true, helperText: errors.email })}
-              />
-              <TextField
                 label="Name"
                 name="name"
                 value={values.name}
@@ -71,6 +69,17 @@ const Login = ({ checked, onChange }) => {
                 inputProps={{ style: { fontSize: "18px", height: "1rem" } }}
                 sx={sharedTextFieldStyles}
                 {...(errors.name && { error: true, helperText: errors.name })}
+              />
+              <TextField
+                label="Email"
+                name="email"
+                value={values.email}
+                onChange={handleInputChange}
+                variant='outlined'
+                color="success"
+                inputProps={{ style: { fontSize: "18px", height: "1rem" } }}
+                sx={sharedTextFieldStyles}
+                {...(errors.email && { error: true, helperText: errors.email })}
               />
               <Button
                 color='success'

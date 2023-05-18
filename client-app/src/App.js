@@ -17,18 +17,18 @@ const lightTheme = createTheme({
 
 
 function App() {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isLightTheme, setIsLightTheme] = useState(false);
 
   const toggleTheme = () => {
-    setIsDarkTheme((prevTheme) => !prevTheme);
+    setIsLightTheme((prevTheme) => !prevTheme);
   };
 
-  const theme = isDarkTheme ? darkTheme : lightTheme;
+  const theme = isLightTheme ? lightTheme : darkTheme;
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Login checked={isDarkTheme} onChange={toggleTheme}/>
+      <Login checked={isLightTheme} onChange={toggleTheme}/>
     </ThemeProvider>
 
   );
