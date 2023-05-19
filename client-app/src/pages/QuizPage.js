@@ -47,7 +47,7 @@ const QuizPage = () => {
 
     temp.push({
       qnId,
-      selected: optionIndx
+      selected: optionIndx + 1
     })
     if (questionIndex < 9) {
       setContext({ selectedOptions: [...temp] })

@@ -4,7 +4,8 @@ export const URL = "http://localhost:5248/"
 
 export const ENDPOINT = {
   participant: 'Participant',
-  question: 'Question'
+  question: 'Question',
+  getAnswers: 'Question/getanswers'
 }
 
 export const createAPIEndpoint = (endpoint) => {
