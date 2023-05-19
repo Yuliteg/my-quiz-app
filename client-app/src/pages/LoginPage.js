@@ -1,6 +1,6 @@
-import { Box, Button, CardContent, TextField, Card, Typography, Switch } from '@mui/material'
-import CenterContainer from '../components/helper/CenterContainer';
-import { useState } from 'react';
+import { CardContent, Card, Typography, Switch } from '@mui/material'
+import CenterContainer from '../components/container/CenterContainer';
+import { useState, useEffect } from 'react';
 import useForm from '../hooks/useForm';
 import { ENDPOINT, createAPIEndpoint } from '../api';
 import { useStateContext } from '../hooks/useStateContext';
@@ -12,27 +12,29 @@ const getLoginModel = () => ({
   email: ''
 })
 
-const Login = ({ checked, onChange }) => {
+const LoginPage = ({ checked, onChange }) => {
   const [disableButton, setDisableButton] = useState(false)
 
-  const { context, setContext } = useStateContext()
+  const { setContext, resetContext } = useStateContext()
   const { values, setValues, errors, handleInputChange, validateForm } = useForm(getLoginModel)
   const navigate = useNavigate()
 
-  const [value, setValue] = useState({})
+  useEffect(() => {
+    resetContext()
+  }, [])
 
   const login = (e) => {
     e.preventDefault()
-    if (validateForm())
+    if (validateForm()) {
       setDisableButton(true)
-      console.log(values);
-    createAPIEndpoint(ENDPOINT.participant)
-      .post(values)
-      .then(res => {
-        setContext({ participantId: res.data.participantId })
-        navigate('/quiz')
-      })
-      .catch(err => console.log(err))
+      createAPIEndpoint(ENDPOINT.participant)
+        .post(values)
+        .then(res => {
+          setContext({ participantId: res.data.participantId })
+          navigate('/quiz')
+        })
+        .catch(err => console.log(err))
+    }
   }
 
   return (
@@ -64,4 +66,4 @@ const Login = ({ checked, onChange }) => {
   )
 }
 
-export default Login
+export default LoginPage

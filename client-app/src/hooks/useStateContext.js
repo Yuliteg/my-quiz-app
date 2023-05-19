@@ -3,15 +3,13 @@ import React, { createContext, useState, useContext, useEffect } from 'react'
 export const stateContext = createContext()
 
 const getContext = () => {
-  if (localStorage.getItem('context') === null)
-  {
+  if (localStorage.getItem('context') === null) {
     localStorage.setItem('context', JSON.stringify({
       participantId: 0,
       timeTaken: 0,
       selectedOptions: []
     }))
   }
-
   return JSON.parse(localStorage.getItem('context'))
 }
 
@@ -20,7 +18,11 @@ export const useStateContext = () => {
   return {
     context,
     setContext: (obj) => {
-      setContext({ ...context, ...obj });
+      setContext({ ...context, ...obj })
+    },
+    resetContext: () => {
+      localStorage.removeItem('context')
+      setContext(getContext())
     }
   };
 };
@@ -29,7 +31,7 @@ const ContextProvider = ({ children }) => {
   const [context, setContext] = useState(getContext())
 
   useEffect(() => {
-   localStorage.setItem('context', JSON.stringify(context))
+    localStorage.setItem('context', JSON.stringify(context))
   }, [context])
 
   return (
