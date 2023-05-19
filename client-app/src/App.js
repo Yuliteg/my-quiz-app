@@ -1,11 +1,11 @@
-import Login from "./components/LoginPage";
+import Login from './pages/LoginPage';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Quiz from "./components/Quiz";
 import Result from "./components/Result";
-import ErrorPage from "./components/ErrorPage";
+import ErrorPage from "./pages/ErrorPage";
 
 const darkTheme = createTheme({
   palette: {
@@ -18,7 +18,6 @@ const lightTheme = createTheme({
     mode: 'light',
   },
 });
-
 
 function App() {
   const [isLightTheme, setIsLightTheme] = useState(false);
