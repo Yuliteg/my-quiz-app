@@ -6,7 +6,6 @@ import ExpandedCircleDown from '@mui/icons-material/ExpandCircleDown'
 import { red, green, grey } from '@mui/material/colors'
 
 const Answer = ({ qnAnswers }) => {
-  console.log(qnAnswers);
   const [expanded, setExpanded] = useState(false)
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -15,7 +14,7 @@ const Answer = ({ qnAnswers }) => {
 
   const handleCorrectOrNot = (qna, index) => {
     if ([qna.answer, qna.selected].includes(index + 1)) {
-        return { sx: { color: qna.answer == (index + 1) ? green[500] : red[500] } }
+        return { sx: { color: qna.answer === (index + 1) ? green[500] : red[500] } }
     }
 } 
 

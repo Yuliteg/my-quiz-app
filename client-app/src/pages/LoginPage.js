@@ -16,7 +16,7 @@ const LoginPage = ({ checked, onChange }) => {
   const [disableButton, setDisableButton] = useState(false)
 
   const { setContext, resetContext } = useStateContext()
-  const { values, setValues, errors, handleInputChange, validateForm } = useForm(getLoginModel)
+  const { values, errors, handleInputChange, validateForm } = useForm(getLoginModel)
   const navigate = useNavigate()
 
   useEffect(() => {

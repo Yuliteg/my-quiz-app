@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useStateContext } from '../hooks/useStateContext'
 import { ENDPOINT, createAPIEndpoint } from '../api'
-import { Alert, Box, Button, Card, CardContent, CardMedia, Typography } from '@mui/material'
-import { getFormatedTime } from '../helper'
 import { useNavigate } from 'react-router-dom'
-import { green } from '@mui/material/colors'
 import Answer from '../components/Answer'
+import ScoreCard from '../components/ScoreCard'
 
 const ResultPage = () => {
   const { context, setContext } = useStateContext()
@@ -63,69 +61,18 @@ const ResultPage = () => {
     } else {
       console.log("Participant ID not avilable");
     }
-
   }
 
   return (
     <>
-    <Card sx={{ mt: 5, display: 'flex', width: '100%', maxWidth: 640, mx: 'auto' }}>
-      <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-        <CardContent sx={{ flex: '1 0 auto', textAlign: 'center' }}>
-          <Typography variant='h4'>Congratulations!</Typography>
-          <Typography variant='h6' sx={{ mt: '5px' }}>YOUR SCORE</Typography>
-          <Typography variant='h5' sx={{ fontWeight: 600 }}>
-            <Typography variant='span' color={green[500]}>
-              {score}
-            </Typography> / 10
-          </Typography>
-          <Typography variant='h6' sx={{ mt: '5px' }}>
-            Took {getFormatedTime(context.timeTaken) + ' mins'}
-          </Typography>
-
-          <Button variant="contained"
-            sx={{ mx: 1, marginTop: '5px' }}
-            size="small"
-            color="success"
-            onClick={submitScore}
-          >
-            Submit
-          </Button>
-          <Button
-            variant="contained"
-            sx={{
-              mx: 1,
-              marginTop: '5px',
-              backgroundColor: "gold",
-              '&:hover': {
-                backgroundColor: 'darkgoldenrod',
-              },
-            }}
-            size="small"
-            onClick={restartQuiz}
-          >
-            Restart
-          </Button>
-          {showAlert && (
-            <Alert
-            severity="success"
-              variant="outlined"
-              sx={{ width: '60%', m: 'auto', marginTop: '5%' }}
-            >
-              Score Updated!
-            </Alert>
-          )}
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ 
-          width: "45%", padding: '13px',
-          objectFit: 'contain',
-         }}
-        image="./prize-removebg-preview.png"
+      <ScoreCard
+        context={context}
+        score={score}
+        submitScore={submitScore}
+        restartQuiz={restartQuiz}
+        showAlert={showAlert}
       />
-    </Card >
-    <Answer qnAnswers={qnAnswers}/>
+      <Answer qnAnswers={qnAnswers} />
     </>
   )
 }

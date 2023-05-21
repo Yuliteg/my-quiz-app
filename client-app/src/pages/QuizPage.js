@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import { useStateContext } from '../hooks/useStateContext'
 import { ENDPOINT, URL, createAPIEndpoint } from '../api'
 import { Card, CardContent, List, ListItemButton, Typography, CardHeader, LinearProgress, Box, CardMedia } from '@mui/material';
@@ -17,6 +17,15 @@ const QuizPage = () => {
   const progressColor = 'rgba(76, 175, 80, 0.2)';
   const darkerProgressColor = 'rgba(76, 175, 80, 0.9)';
 
+  const getQuestion = () => {
+    createAPIEndpoint(ENDPOINT.question)
+      .fetch()
+      .then(res => {
+        setQuestions(res.data)
+      })
+      .catch(e => console.log(e))
+  }
+
   useEffect(() => {
     setContext({
       timeTaken: 0,
@@ -25,13 +34,7 @@ const QuizPage = () => {
     let timer = setInterval(() => {
       setTimeTaken(prev => prev + 1);
     }, 1000);
-
-    createAPIEndpoint(ENDPOINT.question)
-      .fetch()
-      .then(res => {
-        setQuestions(res.data)
-      })
-      .catch(e => console.log(e))
+    getQuestion()
 
     return () => {
       clearInterval(timer);
@@ -52,7 +55,6 @@ const QuizPage = () => {
     if (questionIndex < 9) {
       setContext({ selectedOptions: [...temp] })
       setQuestionIndex(questionIndex + 1)
-
     } else {
       setContext({
         selectedOptions: [...temp],
