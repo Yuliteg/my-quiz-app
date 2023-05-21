@@ -13,6 +13,7 @@ export const createAPIEndpoint = (endpoint) => {
 
   return {
     fetch: () => axios.get(url),
-    post: newRec => axios.post(url, newRec)
+    post: newRec => axios.post(url, newRec),
+    put: (id, updatedRecord) => axios.put(url + id, updatedRecord),
   }
 }

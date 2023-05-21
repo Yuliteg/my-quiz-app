@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useStateContext } from '../hooks/useStateContext'
 import { ENDPOINT, URL, createAPIEndpoint } from '../api'
 import { Card, CardContent, List, ListItemButton, Typography, CardHeader, LinearProgress, Box, CardMedia } from '@mui/material';
-import { getFormatedTime } from '../helper';
+import { getFormatedTime, letterForQuestion } from '../helper';
 import { useNavigate } from 'react-router-dom';
 
 const QuizPage = () => {
@@ -105,7 +105,7 @@ const QuizPage = () => {
           {questions[questionIndex].options.map((item, index) => (
             <ListItemButton key={index} onClick={() => updateAnswer(questions[questionIndex].qnId, index)}>
               <div>
-                {String.fromCharCode(65 + index) + ". "}<b>{item}</b>
+                {letterForQuestion(index)}<b>{item}</b>
               </div>
             </ListItemButton>
           ))}
