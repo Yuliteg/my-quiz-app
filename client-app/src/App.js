@@ -7,6 +7,7 @@ import Quiz from "./pages/QuizPage";
 import Result from "./pages/ResultPage";
 import ErrorPage from "./pages/ErrorPage";
 import Layout from './Layout/Layout';
+import PrivateRoute from './routes/PrivateRoute';
 
 const darkTheme = createTheme({
   palette: {
@@ -36,10 +37,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Login checked={isLightTheme} onChange={toggleTheme} />} />
 
-          <Route path="/" element={<Layout />}>
+          <Route element={<PrivateRoute />}>       
+               <Route path="/" element={<Layout />}>
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/result" element={<Result />} />
           </Route>
+          </Route>
+
 
           <Route path="*" element={<ErrorPage />} />
 
