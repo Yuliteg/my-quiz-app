@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "awOvA+PnuMmLdJud3gv4+kNSJnuZ/O6Yuo+ocgkty64=",
+  "Source": "QuizServer",
+  "BasePath": "_content/QuizServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
