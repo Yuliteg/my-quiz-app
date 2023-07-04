@@ -9,22 +9,22 @@ namespace QuizServer.Models
         public int QnId { get; set; }
 
         [Column(TypeName ="nvarchar(250)")]
-        public string? QnInWordps { get; set; }
+        public string QnInWordps { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string? ImageUrl { get; set; }
+        public string ImageUrl { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string? Option1 { get; set; }
+        public string Option1 { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string? Option2 { get; set; }
+        public string Option2 { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string? Option3 { get; set; }
+        public string Option3 { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string? Option4 { get; set; }
+        public string Option4 { get; set; }
 
         public int Answer { get; set; }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cq+i9CyaO59wDgFv0e5slJns8fH9IXBLkTIYroi/fl3IPUXaTOR+01TQRR0CHysSmthtO4FpYoWDD5fawTNyHg==",
+  "dgSpecHash": "wvlmTQ/+rR4vkw5WT06UyJ88xooFF3KHqyew6BjM3tO301aMX8VA5wMy+CTUFSGwWJDMZvBNwlH6vsS5r53F8Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yulii\\OneDrive\\Pulpit\\QuizServer\\QuizServer.csproj",
+  "projectFilePath": "C:\\Users\\yulii\\OneDrive\\Pulpit\\IT proj\\rozetka-app\\my-quiz-app\\QuizServer\\QuizServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yulii\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\yulii\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

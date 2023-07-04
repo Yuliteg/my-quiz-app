@@ -10236,11 +10236,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yulii\\OneDrive\\Pulpit\\QuizServer\\QuizServer.csproj",
+      "projectUniqueName": "C:\\Users\\yulii\\OneDrive\\Pulpit\\IT proj\\rozetka-app\\my-quiz-app\\QuizServer\\QuizServer.csproj",
       "projectName": "QuizServer",
-      "projectPath": "C:\\Users\\yulii\\OneDrive\\Pulpit\\QuizServer\\QuizServer.csproj",
+      "projectPath": "C:\\Users\\yulii\\OneDrive\\Pulpit\\IT proj\\rozetka-app\\my-quiz-app\\QuizServer\\QuizServer.csproj",
       "packagesPath": "C:\\Users\\yulii\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yulii\\OneDrive\\Pulpit\\QuizServer\\obj\\",
+      "outputPath": "C:\\Users\\yulii\\OneDrive\\Pulpit\\IT proj\\rozetka-app\\my-quiz-app\\QuizServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yulii\\AppData\\Roaming\\NuGet\\NuGet.Config",

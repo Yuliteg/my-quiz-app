@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using QuizServer.Models;
 
 namespace QuizServer.Controllers
 {
-    [Route("api/[controller]")]
+  [Route("api/[controller]")]
     [ApiController]
     public class QuestionController : ControllerBase
     {
@@ -51,7 +44,7 @@ namespace QuizServer.Controllers
                         QnId = y.QnId,
                         QnInWordps = y.QnInWordps,
                         ImageUrl = y.ImageUrl,
-                        Options = new string[] { y.Option1, y.Option2, y.Option3, y.Option4 }, // Add comma here
+                        Options = new string[] { y.Option1, y.Option2, y.Option3, y.Option4 },
                         Answer = y.Answer
                     })).ToListAsync();
 

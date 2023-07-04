@@ -9,9 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = QuizServer
 build_property.RootNamespace = QuizServer
-build_property.ProjectDir = C:\Users\yulii\OneDrive\Pulpit\QuizServer\
+build_property.ProjectDir = C:\Users\yulii\OneDrive\Pulpit\IT proj\rozetka-app\my-quiz-app\QuizServer\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\yulii\OneDrive\Pulpit\QuizServer
+build_property.MSBuildProjectDirectory = C:\Users\yulii\OneDrive\Pulpit\IT proj\rozetka-app\my-quiz-app\QuizServer
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/yulii/OneDrive/Pulpit/IT proj/rozetka-app/my-quiz-app/QuizServer/Views/Participant/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulii/OneDrive/Pulpit/IT proj/rozetka-app/my-quiz-app/QuizServer/Views/Participant/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulii/OneDrive/Pulpit/IT proj/rozetka-app/my-quiz-app/QuizServer/Views/Participant/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulii/OneDrive/Pulpit/IT proj/rozetka-app/my-quiz-app/QuizServer/Views/Participant/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulii/OneDrive/Pulpit/IT proj/rozetka-app/my-quiz-app/QuizServer/Views/Participant/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulii/OneDrive/Pulpit/IT proj/rozetka-app/my-quiz-app/QuizServer/Views/Question/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulii/OneDrive/Pulpit/IT proj/rozetka-app/my-quiz-app/QuizServer/Views/Question/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulii/OneDrive/Pulpit/IT proj/rozetka-app/my-quiz-app/QuizServer/Views/Question/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulii/OneDrive/Pulpit/IT proj/rozetka-app/my-quiz-app/QuizServer/Views/Question/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulii/OneDrive/Pulpit/IT proj/rozetka-app/my-quiz-app/QuizServer/Views/Question/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulii/OneDrive/Pulpit/IT proj/rozetka-app/my-quiz-app/QuizServer/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

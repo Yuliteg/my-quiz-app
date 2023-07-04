@@ -21,6 +21,7 @@ const QuizPage = () => {
     createAPIEndpoint(ENDPOINT.question)
       .fetch()
       .then(res => {
+        console.log(res.data);
         setQuestions(res.data)
       })
       .catch(e => console.log(e))
@@ -63,6 +64,7 @@ const QuizPage = () => {
       navigate("/result")
     }
   }
+  console.log(questions);
 
   return (
     <Card
